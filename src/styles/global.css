@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "./typography.css";
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 :root,
 html[data-theme="light"] {
@@ -38,7 +38,16 @@ html[data-theme="dark"] {
     @apply overflow-y-scroll scroll-smooth;
   }
   body {
-    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    @apply flex min-h-svh flex-col bg-[var(--color-background)] font-mono text-[var(--color-foreground)] selection:bg-[var(--color-accent)]/75 selection:text-[var(--color-background)];
+  }
+  header {
+    @apply bg-[var(--color-background)] text-[var(--color-foreground)];
+  }
+  main {
+    @apply bg-[var(--color-background)] text-[var(--color-foreground)];
+  }
+  section {
+    @apply bg-[var(--color-background)] text-[var(--color-foreground)];
   }
   a,
   button {
@@ -55,15 +64,40 @@ html[data-theme="dark"] {
 }
 
 @utility max-w-app {
-  @apply max-w-3xl;
+  @apply max-w-[1000px];
 }
 
 .active-nav {
   @apply underline decoration-wavy decoration-2 underline-offset-4;
 }
 
+/* 强制更新主题图标动画 */
+#theme-btn {
+  &[data-theme="dark"] .dark\\:opacity-0 {
+    opacity: 0 !important;
+    transform: scale(0) !important;
+  }
+  &[data-theme="dark"] .dark\\:opacity-100 {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+  }
+  &[data-theme="light"] .opacity-0 {
+    opacity: 0 !important;
+    transform: scale(0) !important;
+  }
+  &[data-theme="light"] .opacity-100 {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+  }
+}
+
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
-/* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 1rem;
+}
+
+#particles-js {
+  background: radial-gradient(ellipse at center, #0d0d1a 0%, #000000 100%);
+  background-size: cover;
+  background-position: center;
 }

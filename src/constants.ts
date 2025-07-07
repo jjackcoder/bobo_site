@@ -9,17 +9,18 @@ import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import IconPinterest from "@/assets/icons/IconPinterest.svg";
 import { SITE } from "@/config";
 
-interface Social {
+export interface Social {
   name: string;
   href: string;
   linkTitle: string;
-  icon: (_props: Props) => Element;
+  icon: (_props: Props) => JSX.Element | Element;
 }
 
-export const SOCIALS: Social[] = [
+// 个人社交账号链接
+export const SOCIALS: readonly Social[] = [
   {
     name: "GitHub",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://github.com/jjackcoder/bobo_site",
     linkTitle: `${SITE.title} on GitHub`,
     icon: IconGitHub,
   },
@@ -37,13 +38,14 @@ export const SOCIALS: Social[] = [
   },
   {
     name: "Mail",
-    href: "mailto:yourmail@gmail.com",
+    href: "mailto:bojackjck@gmail.com",
     linkTitle: `Send an email to ${SITE.title}`,
     icon: IconMail,
   },
 ] as const;
 
-export const SHARE_LINKS: Social[] = [
+// 文章分享用链接
+export const SHARE_LINKS: readonly Social[] = [
   {
     name: "WhatsApp",
     href: "https://wa.me/?text=",

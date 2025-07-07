@@ -1,0 +1,67 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import Card from "@/components/Card.astro";
+import Hr from "@/components/Hr.astro";
+import getSortedPosts from "@/utils/getSortedPosts";
+import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import { SITE } from "@/config";
+
+const posts = await getCollection("blog");
+const sortedPosts = getSortedPosts(posts);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+---
+
+<Layout>
+    <Header />
+
+    <main id="main-content" class="bg-[var(--color-background)] text-[var(--color-foreground)] relative">
+        <section class="pt-12 pb-12 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto">
+            <h1 class="text-4xl font-bold mb-4">博客内容</h1>
+            <p class="text-gray-400 mb-10">这里是我分享的技术文章、学习笔记与思考。</p>
+
+            {
+                featuredPosts.length > 0 && (
+                            <>
+                                <section id="featured" class="pt-6 pb-6">
+                                    <h2 class="text-2xl font-semibold tracking-wide text-[var(--color-foreground)]">特色文章</h2>
+                                    <ul class="mt-4">
+                                        {featuredPosts.map(data => (
+                                                <Card variant="h3" {...data} />
+                                        ))}
+                                    </ul>
+                                </section>
+                                {recentPosts.length > 0 && <Hr />}
+                            </>
+                )
+            }
+
+            {
+                recentPosts.length > 0 && (
+                            <section id="recent-posts" class="pt-6 pb-6">
+                                <h2 class="text-2xl font-semibold tracking-wide text-[var(--color-foreground)]">最新文章</h2>
+                                <ul class="mt-4">
+                                    {recentPosts.map(
+                                        (data, index) =>
+                                            index < SITE.postPerIndex && <Card variant="h3" {...data} />
+                                    )}
+                                </ul>
+                            </section>
+                )
+            }
+
+            <div class="my-8 text-center">
+                <LinkButton href="/posts/" class="text-[var(--color-foreground)]">
+                    All Posts
+                    <IconArrowRight class="inline-block rtl:-rotate-180" />
+                </LinkButton>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+</Layout>
