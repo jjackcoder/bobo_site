@@ -5,7 +5,7 @@ title: "About"
 
 你好，欢迎来到我的个人博客！👋
 
-我是 **Jackbo（@jjackcoder）**，一名热爱技术与探索的开发者，目前居住在中国，从事互联网相关工作，专注于 **前端开发、网络安全、AI 应用与电商技术变现路径** 等领域。
+我是 **刘波（@jjackcoder）**，一名热爱技术与探索的开发者，目前居住在中国，热爱且从事互联网相关工作，专注于 **前端开发、网络安全、AI 应用与电商技术变现路径** 等领域。
 
 我相信技术不仅是工具，更是一种通往自由与价值实现的方式。
 
@@ -13,9 +13,9 @@ title: "About"
 
 ## 关于这个网站
 
-这个博客是我基于 [Astro](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/) 所搭建的静态网站，部署在 **Cloudflare Pages**，完全免费且全球可访问。
+这个博客是我基于 [Astro](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/) 所搭建的静态网站，部署在 **Cloudflare Pages** 和 **Vercel** 两个平台上全球可访问。
 
-它的主要目的有三点：
+主要目的：
 
 1. **个人介绍**：展示我的技能栈与兴趣方向。
 2. **技术博客**：记录开发踩坑与学习笔记。
@@ -30,7 +30,7 @@ title: "About"
 - AI 应用：Stable Diffusion / ChatGPT / Whisper / Vosk
 - 部署平台：Vercel / Cloudflare Pages / Netlify
 - 工具链：Git / GitHub / VS Code / Postman
-- 英语：已通过 CET-4，致力于口语与写作提升 📈
+- 英语：CET-4/6持证，致力于口语与写作提升 📈
 
 ---
 
@@ -39,7 +39,7 @@ title: "About"
 你可以通过以下方式找到我：
 
 - GitHub: [jjackcoder](https://github.com/jjackcoder)
-- 邮箱: 629410461@qq.com
+- 邮箱: bojackjck@gmail.com & 629410461@qq.com
 
 ---
 
