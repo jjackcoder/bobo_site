@@ -3,35 +3,47 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+你好，欢迎来到我的个人博客！👋
 
-![Astro Paper](public/astropaper-og.jpg)
+我是 **Jackbo（@jjackcoder）**，一名热爱技术与探索的开发者，目前居住在中国，从事互联网相关工作，专注于 **前端开发、网络安全、AI 应用与电商技术变现路径** 等领域。
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+我相信技术不仅是工具，更是一种通往自由与价值实现的方式。
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+---
 
-## Features
+## 关于这个网站
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+这个博客是我基于 [Astro](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/) 所搭建的静态网站，部署在 **Cloudflare Pages**，完全免费且全球可访问。
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+它的主要目的有三点：
 
-and so much more.
+1. **个人介绍**：展示我的技能栈与兴趣方向。
+2. **技术博客**：记录开发踩坑与学习笔记。
+3. **副业探索**：研究如何通过编程变现，走向财务自由。
 
-## Show your support
+---
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+## 我的技能关键词 🔧
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
+- 前端：Vue.js / React / TailwindCSS / Astro
+- 后端：Node.js / Python / Express
+- AI 应用：Stable Diffusion / ChatGPT / Whisper / Vosk
+- 部署平台：Vercel / Cloudflare Pages / Netlify
+- 工具链：Git / GitHub / VS Code / Postman
+- 英语：已通过 CET-4，致力于口语与写作提升 📈
 
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
+---
 
-Kyay zuu! 🙏🏼
+## 联系我 💬
+
+你可以通过以下方式找到我：
+
+- GitHub: [jjackcoder](https://github.com/jjackcoder)
+- 邮箱: 629410461@qq.com
+
+---
+
+感谢你浏览我的博客，如果你对内容感兴趣，欢迎一起交流学习！
+
+> “Stay hungry, stay foolish.” —— Steve Jobs
+
