@@ -13,7 +13,7 @@ interface Social {
   name: string;
   href: string;
   linkTitle: string;
-  icon: (_props: Props) => Element;
+  icon: (_props: Props) => any;
 }
 
 export const SOCIALS: Social[] = [

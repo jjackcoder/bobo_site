@@ -57,7 +57,6 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
             title="切换主题"
             aria-label="切换主题"
             aria-live="polite"
-            client:load
         >
           <IconMoon class="absolute top-1/2 left-1/2 w-6 h-6 -translate-x-1/2 -translate-y-1/2 transition-all dark:opacity-0 dark:scale-0" />
           <IconSunHigh class="absolute top-1/2 left-1/2 w-6 h-6 -translate-x-1/2 -translate-y-1/2 opacity-0 scale-0 transition-all dark:opacity-100 dark:scale-100" />
@@ -117,12 +116,12 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
   <Hr />
 </header>
 
-<script lang="ts" is:inline>
-  function toggleNav(): void {
-    const menuBtn = document.querySelector<HTMLButtonElement>("#menu-btn");
-    const menuItems = document.querySelector<HTMLDivElement>("#mobile-menu");
-    const menuIcon = document.querySelector<SVGElement>("#menu-icon");
-    const closeIcon = document.querySelector<SVGElement>("#close-icon");
+<script is:inline>
+  function toggleNav() {
+    const menuBtn = document.querySelector("#menu-btn");
+    const menuItems = document.querySelector("#mobile-menu");
+    const menuIcon = document.querySelector("#menu-icon");
+    const closeIcon = document.querySelector("#close-icon");
 
     if (!menuBtn || !menuItems || !menuIcon || !closeIcon) return;
 
@@ -135,8 +134,8 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
     });
   }
 
-  function toggleTheme(): void {
-    const themeBtn = document.querySelector<HTMLButtonElement>("#theme-btn");
+  function toggleTheme() {
+    const themeBtn = document.querySelector("#theme-btn");
     if (!themeBtn) return;
 
     themeBtn.addEventListener("click", () => {
@@ -146,13 +145,11 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
       html.setAttribute("data-theme", newTheme);
       localStorage.setItem("theme", newTheme);
 
-      // 强制更新 Tailwind 样式
       html.classList.toggle("dark", newTheme === "dark");
 
       console.log("Theme switched to:", newTheme);
     });
 
-    // 初始加载时应用保存的主题
     const savedTheme = localStorage.getItem("theme") || "dark";
     document.documentElement.setAttribute("data-theme", savedTheme);
     document.documentElement.classList.toggle("dark", savedTheme === "dark");
